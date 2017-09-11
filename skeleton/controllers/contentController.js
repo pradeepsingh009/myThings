@@ -66,27 +66,25 @@ module.exports.add = function(req,res){
   });
 }
 
+// function to update
 module.exports.update = function(req,res){
+  
   var studentName = req.body.StudentName;
-
-  studentModel.find({StudentName : studentName},function(err,student){
-    console.log(student);
-    if(student){
-      student.Section = req.body.Section;
-      student.Marks = req.body.Marks;
-      student.Subject = req.body.Subject;
-
-      student.save(function(err){
-        if(err){
-          throw err;
-        }
-        console.log("Student "+studentName+" updated successfully.");
-        res.send(true);
-      });
+  condition = {StudentName : studentName};
+  setter = {
+    Section : req.body.Section,
+    Marks : req.body.Marks,
+    Subject : req.body.Subject
+  }
+  studentModel.findOneAndUpdate(condition,setter,function(err,student){
+    if(err){
+      throw err;
+      res.send(false);
     }else{
-      res.send("Student "+studentName+" does not exist");
+        res.send(student);
+        console.log("Student "+studentName+" updated successfully");
     }
-    res.send(false);
+
 
   });
 }
