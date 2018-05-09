@@ -1,0 +1,16 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+</head>
+
+<body>
+    <form method="POST">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Sign-Up">
+        </form>
+</body>
+
+</html>
