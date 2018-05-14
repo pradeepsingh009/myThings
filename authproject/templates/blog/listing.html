@@ -23,7 +23,7 @@
         <div class="main">
             {% for article in articles %}
             <div>
-                <img src="{{ article.image.path )}">
+                <img src="{{ article.image.url }}">
                 <h2>{{ article.title }}</h2>
                 <p>{{ article.description }}</p>
             </div>
