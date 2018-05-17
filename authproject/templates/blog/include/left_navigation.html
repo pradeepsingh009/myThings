@@ -1,0 +1,14 @@
+<div class="menu">
+    <h2 style="text-decoration: underline">Categories</h2>
+
+    {% for cat_id,cat_dict in categories_dict.items %}
+    <a href="?category={{ cat_id }}">{{ cat_dict.category }} ({{ cat_dict.article_count }}) </a>
+    {% endfor %} 
+    
+    <h2 style="text-decoration: underline">Authors</h2>
+
+    {% for art_id,art_dict in authors_dict.items %}
+    <a href="?author={{ art_id }}">{{ art_dict.author.first_name }} ({{ art_dict.article_count }}) </a>
+    {% endfor %}
+
+</div>

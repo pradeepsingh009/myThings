@@ -1,3 +1,4 @@
+
 {% extends 'blog/layout.html' %} 
 
 {% block content %}
@@ -10,7 +11,7 @@
 
     {% include 'blog/include/left_navigation.html' %}
 
-    {% include 'blog/include/blog_looping.html' %}
+    {{ article }}
 
     {% include 'blog/include/right_description.html' %}
 
