@@ -147,8 +147,8 @@ EMAIL_HOST = 'smtp.gmail.com'
 DEFAULT_FROM_EMAIL = 'pradeep1.singh@osscube.com'
 EMAIL_PORT = 25
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'pradeep1.singh@osscube.com'
-EMAIL_HOST_PASSWORD = 'Zolfresh@1'
+EMAIL_HOST_USER = 'senderemialid'
+EMAIL_HOST_PASSWORD = 'password'
 
 # from django.core.mail import EmailMessage
 # email = EmailMessage(subject="subject",body="body",to=["pssaini009@gmail.com"],from_email="pssaini009@gmail.com")
