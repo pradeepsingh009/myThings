@@ -134,3 +134,19 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 MEDIA_URL = '/media/'
 
+
+# working mail settings
+# it is not mendatory to specify EMAIL_BACKEND
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+
+DEFAULT_FROM_EMAIL = 'pradeep1.singh@osscube.com'
+EMAIL_PORT = 25
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'pradeep1.singh@osscube.com'
+EMAIL_HOST_PASSWORD = 'Zolfresh@1'
+
+# from django.core.mail import EmailMessage
+# email = EmailMessage(subject="subject",body="body",to=["pssaini009@gmail.com"],from_email="pssaini009@gmail.com")
+# email.send()
+
