@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'authapp.apps.AuthappConfig',
-    'blog.apps.BlogConfig'
+    'blog.apps.BlogConfig',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -85,7 +86,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'djangoauth',
         'USER': 'root',
-        'PASSWORD': 'root',
+        'PASSWORD': '',
         'HOST': '127.0.0.1',
         'PORT': '3306',
     }
