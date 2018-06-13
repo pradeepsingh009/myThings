@@ -7,6 +7,12 @@ import sys
 
 
 def listing(request):
+    print(dir(request))
+
+    print(request.method)
+    print(request.get_host())
+    print(request.get_port())
+    print(request.session)
     all_articles = Article.objects.all()
     paginator = Paginator(all_articles, 2)
 

@@ -6,7 +6,7 @@ from rest_framework import status
 # Create your views here.
 
 def article_list(request):
-    articles = Article.objects.all()
+    articles = Article.objects.all().order_by('-id')
     article_serializer = serializer.ArticleSerilizer(articles,many=True)
     print(type(article_serializer.data))
     print(articles.count())
