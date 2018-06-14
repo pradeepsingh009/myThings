@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from blog.models import Article
+from blog.models import Article,ArticleCategory
 from api import serializer
 from django.http import JsonResponse
 from rest_framework import status
@@ -17,3 +17,9 @@ def article_list(request):
     }
 
     return JsonResponse(return_dict,status = status.HTTP_200_OK)
+
+def category_list(request):
+    categories = ArticleCategory.objects.all()
+    cat_serializer = serializer.CategorySerializer(categories,many=True)
+
+    return JsonResponse(cat_serializer.data,safe = False,status= status.HTTP_200_OK)
