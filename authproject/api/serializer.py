@@ -1,7 +1,7 @@
 from blog.models import Article,ArticleCategory
 from rest_framework import serializers
 
-class ArticleSerilizer(serializers.ModelSerializer):
+class ArticleListSerializer(serializers.ModelSerializer):
 
     unique_name = serializers.SerializerMethodField()
     author_name = serializers.SerializerMethodField()
@@ -52,3 +52,8 @@ class CategorySerializer(serializers.ModelSerializer):
             return_list.append(temp_dict)
         return return_list
 
+class ArticleSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Article
+        fields = ['title','description','long_description','date_created','author','article_category']
